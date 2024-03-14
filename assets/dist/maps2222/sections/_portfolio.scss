@@ -1,0 +1,665 @@
+/**
+* ----------------------------------------------
+* Single portfolio css
+* ----------------------------------------------
+*/
+.single-portfolio {
+  position: relative;
+  padding-top: 150px;
+  background-color: $white;
+  @include position(fixed, 0, 0, 0, 0, 99);
+  @include transform(translateX(100%));
+  @include transition(transform 0.5s);
+  overflow-y: auto;
+  @media (max-width: 767px) {
+    padding-top: 100px;
+  }
+  &.show {
+    @include transform(translateX(0));
+    @include transition(transform 0.5s);
+  }
+  .portfolio-image {
+    img {
+      width: 100%;
+    }
+  }
+  .tags {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  .single-portfolio-content {
+    margin-bottom: 2rem;
+    p {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .social-link {
+    @include border(top, 1px, solid, $border-color);
+  }
+  .close-btn {
+    @include position(absolute, 30px, 50px, null, null);
+    text-align: center;
+    @media (max-width: 767px) {
+      right: 15px;
+      top: 15px;
+    }
+    a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      font-size: 1.5rem;
+    }
+  }
+  .work-navigation-section {
+    margin-top: 100px;
+    .work-nav {
+      display: flex;
+      align-items: center;
+      @media (max-width: 479px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        margin-right: 50px;
+        @media (max-width: 767px) {
+          width: 75px;
+          height: 75px;
+          margin-right: 25px;
+        }
+        @media (max-width: 479px) {
+          margin: 0;
+        }
+      }
+      h5 {
+        span {
+          display: block;
+          font-size: 80%;
+          color: $default-color;
+        }
+        @media (max-width: 479px) {
+          width: 100%;
+          margin-top: 15px;
+          text-align: center;
+        }
+      }
+      &.next-work {
+        flex-direction: row-reverse;
+        img {
+          margin-left: 50px;
+          margin-right: 0;
+          @media (max-width: 767px) {
+            margin-right: 0;
+            margin-left: 25px;
+          }
+          @media (max-width: 479px) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+* ----------------------------------------------
+* Portfolio or our works css
+* ----------------------------------------------
+*/
+.portfolio-section-header {
+  .work-nav {
+    margin-bottom: 0;
+  }
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .work-nav {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.work-nav {
+  display: flex;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .control {
+    color: $link-color;
+    position: relative;
+    text-transform: capitalize;
+    @include transition(all 0.3s ease-in-out);
+    letter-spacing: 1px;
+    &:after {
+      @include position(absolute, null, 0, -10px, 0);
+      content: "";
+      width: 70%;
+      height: 2px;
+      margin: 0 auto;
+      opacity: 0;
+      @include transform(scaleX(0));
+      @include transition(all 0.3s ease-in-out);
+    }
+    &.filtr-active,
+    &:hover {
+      &:after {
+        opacity: 1;
+        @include transform(scaleX(1));
+        @include transition(all 0.5s);
+      }
+    }
+  }
+}
+.work-list {
+  .filtr-item {
+    width: 33.33%;
+    padding: 15px;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      width: 50%;
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+    }
+  }
+  .four-col {
+    .filtr-item {
+      width: 25%;
+      @media (max-width: 767px) {
+        width: 50%;
+      }
+      @media (max-width: 479px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.work-grid-box-1,
+.team-box-1 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: block;
+  .grediant-overlay, .overlay {
+    visibility: hidden;
+  }
+  .grid-image {
+    overflow: hidden;
+    a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      flex-grow: 1;
+      &:after {
+        @include position(absolute, 0, 0, 0, 0, 2);
+        color: $white;
+        width: 20px;
+        height: 15px;
+        content: "\e087";
+        font-family: $simple-line-icon;
+        margin: auto;
+        font-size: 1.2rem;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all 0.5s ease-in-out);
+        @include transform(scale(0.5));
+      }
+    }
+    img {
+      @include transition(transform 0.5s ease);
+    }
+  }
+  .grid-icon {
+    @include position(absolute, 30px, null, null, 30px, 2);
+    @include transform(translate3d(-100%, 0, 0));
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.3s ease-in-out 0.2s);
+    a {
+      color: $white;
+      @include border(null, 1px, solid, $white);
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      border-radius: 100%;
+      font-weight: 600;
+      text-align: center;
+      &:hover {
+        background: $white;
+        color: $black;
+      }
+    }
+
+    &:before {
+      @include position(absolute, 0, null, 0, -30px);
+      background: $white;
+      height: 1px;
+      width: 30px;
+      margin: auto 0;
+      content: "";
+    }
+
+    @media (max-width: 767px) {
+      top: 20px;
+      left: 20px;
+      &:before {
+        left: -20px;
+        width: 20px;
+      }
+    }
+    @media (max-width: 479px) {
+      top: 15px;
+      left: 15px;
+      &:before {
+        left: -15px;
+        width: 15px;
+      }
+    }
+  }
+  .grid-body {
+    @include position(absolute, null, null, 30px, 0, 2);
+    @include transform(translate3d(0, 100%, 0));
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.3s ease-in-out);
+    text-align: center;
+    width: 100%;
+    @media (max-width: 767px) {
+      left: 20px;
+      bottom: 20px;
+    }
+    @media (max-width: 479px) {
+      bottom: 15px;
+      left: 15px;
+    }
+  }
+  .social-white {
+    justify-content: center;
+    a {
+      background-color: $heading-color;
+      color: $white;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  &:hover {
+    .grediant-overlay, .overlay {
+      visibility: visible;
+    }
+    .grid-image {
+      a {
+        &:after {
+          opacity: 0.9;
+          visibility: visible;
+        }
+        &:after {
+          @include transform(scale(1));
+        }
+      }
+      img {
+        @include transform(scale(1.05));
+      }
+    }
+    .grid-icon,
+    .grid-body {
+      opacity: 1;
+      visibility: visible;
+      @include transform(translate3d(0, 0, 0));
+    }
+  }
+}
+
+.work-grid-box-1 {
+  .grid-image img {
+    width: 100%;
+  }
+}
+
+.work-grid-box-2 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: block;
+  .grediant-overlay,
+  .overlay {
+    visibility: hidden;
+    @include transition(all 0.4s ease);
+    width: 0;
+    opacity: 0;
+  }
+  .grid-image {
+    overflow: hidden;
+    a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      flex-grow: 1;
+    }
+    img {
+      @include transition(transform 0.5s ease);
+      width: 100%;
+    }
+  }
+  .grid-icon {
+    @include position(absolute, 30px, 60px, null, null, 2);
+    @include transform(translate3d(-100%, 0, 0));
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.5s);
+    a {
+      color: $white;
+      width: 40px;
+      height: 40px;
+      font-size: px-rem-converter(40px);
+      line-height: 40px;
+      display: block;
+      border-radius: 100%;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (max-width: 767px) {
+      top: 2.5rem;
+      left: 2.5rem;
+      &:before {
+        left: -2.5rem;
+        width: 2.5rem;
+      }
+    }
+    @media (max-width: 479px) {
+      top: 1.5rem;
+      left: 1.5rem;
+      &:before {
+        left: -1.5rem;
+        width: 1.5rem;
+      }
+    }
+  }
+  .grid-body {
+    @include position(absolute, null, null, 30px, 30px, 2);
+    @include transform(translate3d(0, 100%, 0));
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all 0.3s ease-in-out);
+    @media (max-width: 767px) {
+      left: 2.5rem;
+      bottom: 2.5rem;
+    }
+    @media (max-width: 479px) {
+      bottom: 1.5rem;
+      left: 1.5rem;
+    }
+    h5 {
+      color: $white;
+    }
+    p {
+      margin-bottom: 0;
+      color: $white;
+      opacity: 0.8;
+    }
+  }
+  &:hover {
+    .grediant-overlay,
+    .overlay {
+      opacity: 0.95;
+      visibility: visible;
+      width: 100%;
+    }
+    .grid-image {
+      a {
+        &:before {
+          opacity: 0.9;
+          visibility: visible;
+          width: 100%;
+        }
+        &:after {
+          @include transform(scale(1));
+        }
+      }
+      img {
+        @include transform(scale(1.05));
+      }
+    }
+    .grid-icon,
+    .grid-body {
+      opacity: 1;
+      visibility: visible;
+      @include transform(translate3d(0, 0, 0));
+    }
+    .grid-icon {
+      // animation: animate-icon .3s ease-in-out 0.3s; //animation type 2
+      right: 30px;
+    }
+  }
+}
+
+@-webkit-keyframes animate-icon {
+  from {
+    right: 0%;
+  }
+  to {
+    right: calc(100% - 30px);
+  }
+}
+
+@keyframes animate-icon {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 30px;
+  }
+}
+
+.work-grid-box-3 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: block;
+  .overlay {
+    left: 7px;
+    top: 7px;
+    @include transform(scale(1.1));
+    @include transition(all 0.3s linear);
+    width: calc(100% - 2 * 7px);
+    height: calc(100% - 2 * 7px);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .grid-content {
+    @include position(absolute, 50%, 10%, null, 10%);
+    @include transform(translateY(-50%));
+    z-index: 2;
+    text-align: center;
+  }
+  .grid-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    a {
+      color: $white;
+      @include border(null, 1px, solid, $white);
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      border-radius: 100%;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0;
+      @include transition(all 0.3s linear);
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+  .grid-body {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+    top: -10px;
+    opacity: 0;
+    @include transition(all 0.3s linear);
+    &:after {
+      @include position(absolute, null, 0, 0, 0);
+      display: block;
+      height: 0.5px;
+      opacity: 0.5;
+      width: 50%;
+      margin: 0 auto;
+      content: "";
+      background-color: $white;
+      @include transform(scaleX(0));
+      @include transition(all 0.3s linear);
+    }
+    h5,
+    p {
+      color: $white;
+    }
+  }
+  &:hover {
+    .overlay {
+      opacity: 0.9;
+      @include transform(scale(1));
+      visibility: visible;
+    }
+    .grid-body {
+      top: 0;
+      opacity: 1;
+      transition-delay: 0.2s;
+      &:after {
+        @include transform(scaleX(1));
+        transition-delay: 0.65s;
+      }
+    }
+    .grid-icon {
+      a {
+        margin-top: 0;
+        opacity: 1;
+        transition-delay: 0.95s;
+        &:last-child {
+          transition-delay: 1.05s;
+        }
+      }
+    }
+  }
+}
+
+.work-grid-box-4 {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+  .grid-content {
+    @include position(absolute, 5px, 5px, 5px, 5px);
+    @include transform(translateY(10px));
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    opacity: 0;
+    @include transition(all 0.5s);
+    flex-direction: column;
+    h6 {
+      @include transform(translateY(-15px));
+      @include transition(all 0.5s);
+      opacity: 0;
+    }
+  }
+  .thumb-img {
+    @include position(absolute, null, 15px, 15px, null);
+    font-size: 1.5rem;
+    color: $black;
+  }
+  &:hover {
+    .grid-content {
+      opacity: 1;
+      @include transform(translateY(0));
+      h6 {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  .work-grid-box-5 {
+    width: 50%;
+    &:nth-child(odd) {
+      padding-right: 45px;
+    }
+    &:nth-child(even) {
+      padding-left: 45px;
+      padding-top: 100px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      &:nth-child(even),
+      &:nth-child(odd) {
+        padding: 0 0 90px 0;
+      }
+    }
+  }
+}
+
+.work-grid-box-5 {
+  .work-image {
+    width: 100%;
+    position: relative;
+    display: block;
+    // padding-top: 75%;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    z-index: 1;
+    &:after {
+      @include position(absolute, null, null, 0, 0, -1);
+      width: 70%;
+      content: "";
+      height: 75%;
+      background-color: rgba(74, 195, 102, 0.2);
+      border-radius: 4px;
+    }
+  }
+  .inner-image-abs {
+    @include position(absolute, null, null, 0, 50%, 2);
+    @include transform(translate3d(-50%, 0, 0));
+    overflow: hidden;
+    width: 85%;
+    text-align: center;
+  }
+  &:nth-child(even) {
+    .work-image {
+      text-align: right;
+      &:after {
+        background-color: rgba($gray-400, 0.2);
+      }
+    }
+  }
+}

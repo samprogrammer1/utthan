@@ -1,0 +1,76 @@
+
+/**
+* ----------------------------------------------
+* Team member css
+* ----------------------------------------------
+*/
+.team-box-1 {
+  .grid-image {
+    a {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.team-box-2{
+  position: relative;
+  overflow: hidden;
+  padding-right: 1px;
+  color: $white;
+  .team-body{
+    @include position(absolute,auto,1px,0,0);
+    padding: 15px 30px;
+    @include transition(all 0.3s ease-in-out);
+    @include transform(translateY(90px));
+  }
+  .team-title{
+    color: $white;
+  }
+  .team-description{
+    opacity: 0.8;
+  }
+  &:hover{
+    .team-body{
+      @include transform(translateY(0));
+    }
+  }
+}
+
+.team-box-3{
+  padding: 15px;
+  background: $white;    
+  .social-link{
+    margin-top: 1.5rem;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .team-image{
+    margin-bottom: 1rem;
+  }
+  .team-body{
+    text-align: center;
+    .team-description{
+      line-height: 1;
+    }
+  }
+}
+
+.team-box-4{
+  display: block;
+  img{
+    @include grayScale(100%);
+    @include transition(all 0.5s);
+  }
+  .team-body{
+    color: $black;
+    padding: 15px;
+    text-align: center;
+  }
+  &:hover{
+    img{
+      @include grayScale(0);
+    }
+  }
+}

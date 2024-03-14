@@ -1,0 +1,160 @@
+
+/**
+* ----------------------------------------------
+* App css
+* ----------------------------------------------
+*/
+.app-screen{
+  padding-top: 200px;
+  @media (max-width:991px) {
+    padding-top: 0
+  }
+}
+
+.app-awesome-feature{
+  box-shadow: none;
+  color: $white;
+  display: flex;
+  padding: 0;
+  flex-direction: row-reverse;
+  text-align: right;
+  @media (max-width: 991px){
+    text-align: center;
+    flex-direction: column;
+  }
+  .icon-bg-img{
+    margin-left: 15px;
+    margin-top: 5px;
+    @media (max-width: 991px){
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &.left{
+    flex-direction: row;
+    text-align: left;
+    @media (max-width: 991px){
+      text-align: center;
+      flex-direction: column;
+    }
+    .icon-bg-img{
+      margin-right: 15px;
+      margin-left: 0;
+    }
+  }
+}
+
+.mobile-wrapper {
+  position: relative;
+  margin-top: 90px;
+  &:after {
+    @include position(absolute, -105px, null, null, 50%, 1);
+    @include transform(translateX(-50%));
+    background: url("#{$image-path}/screen-frame.png") no-repeat;
+    background-size: contain;
+    width: 315px;//315
+    height: 625px;//625
+    content: "";
+    margin-left: 2px;
+    @media (max-width: 1024px) {
+      width: 290px;//337
+      height: 540px;//665
+      top: -90px;
+    }
+    @media (max-width: 767px) {
+      height: 398px;
+      top: -65px;
+      left: 115px;
+    }
+  }
+  .swiper-pagination{
+    margin-top: 90px;
+  }
+}
+
+.screenshots-slider{
+  &.img-overlay{
+    .swiper-slide {
+      position: relative;
+      &:after {
+        @include position(absolute, 0, 0, 0, 0);
+        content: "";
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      &.swiper-slide-active {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.play-img-feature{
+  position: relative;
+  margin: 90px 0;
+  .awesome-play-feature-left, .awesome-play-feature-right{
+    padding: 100px 0;
+  }
+  .awesome-play-feature-left{
+    @media (max-width: 991px) {
+      padding: 100px 0 0;
+    }
+  }
+  .awesome-play-feature-right{
+    @media (max-width: 991px) {
+      padding: 0 0 100px;
+    }
+  }
+  .powerful-feature-play-image{
+    position: absolute;
+    top: -90px;
+    left: 0;
+    right: 0;
+    @media (max-width: 991px) {
+      position: static;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.download-app {
+  background-attachment: fixed;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  .icon-box {
+    background-color: $white;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 1.75rem;
+  }
+  .icon-alpha{
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 1.75rem;
+    span{
+      width: 75px;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+  }
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  .store-btn {
+    margin-top: 1.75rem;
+  }
+  .download-app-image {
+    position: absolute;
+    top: 0;
+    @media (max-width:767px) {
+      position: relative;
+      top: 70px;
+    }
+  }
+}

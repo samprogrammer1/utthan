@@ -1,0 +1,285 @@
+/**
+ * ----------------------------------------------
+ * Font Faces
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * Font Sizes
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * COLOR CODES
+ * ----------------------------------------------
+ *
+*/
+/**
+* ----------------------------------------------
+* Shadows CODES
+* ----------------------------------------------
+*
+*/
+/**
+ * ----------------------------------------------
+ * Loop classes
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * Theme colors
+ * ----------------------------------------------
+ *
+*/
+/*
+* @description Set transition
+* Pass transition single properties E.g @include transition(border 0.3s ease-in-out) => transition: border 0.3s ease-in-out; -webkit-transition: border 0.3s ease-in-out;
+*/
+/*
+* @description Set transform
+* Pass transform value E.g @include transform(scale(0.3)) => transform: scale(0.3); -webkit-transform: scale(0.3);
+*/
+/*
+* @description Set delay in transition
+* Pass transition delay E.g @include transition-delay(1s) => transition-delay: 1s; -webkit-transition-delay: 1s.
+*/
+/*
+* @description This mixin is used to create position
+* Pass position like absolute, fixed etc. and give top, bottom, left, right, index.
+* All params are optional, After passing all things it's generate the css.
+* E.g @include position(absolute, 10px, 10px, 10px, 10px, 1) => position: absolute;top:10px;bottom:10px;left:10px;right:10px;index:1;
+* Another E.g @include position(absolute, 10px, 10px, 10px, 10px) => position: absolute;top:10px;bottom:10px;left:10px;right:10px;
+*/
+/*
+* @description This mixin is used to create border
+* Pass direction like top, bottom, left, right and give width of the border, style of border like solid, dashes etc, color of the border and pass null if you want border all the sides. E.g @include border(null, 1px, solid, #000) => border: 1px solid #000;
+* Another E.g @include border(left, 1px, solid, #000) => border-left: 1px solid #000;
+*/
+/*
+* @description This mixin is used to create grediant button
+* Pass grediant value, clip type, clip type 2, origin E.g @include gradient($gred) => background-image: $grad; ---> used to include grediant background
+* Another E.g @include gradient($gred,padding-box, border-box, border-box) => background-image: $grad;background-clip: padding-box, border-box; background-origin: border-box;---> this used to create button gred.
+*/
+/*
+* @description This mixin is used to create text grediant
+* Pass grediant value E.g @include text-gradient($gred) => background-image: $grad; -webkit-text-fill-color: transparent; -webkit-background-clip: text;
+*/
+/*
+* @description This mixin is used to create greyscale the image or others
+* Pass greyscale percentage E.g @include grayScale(100%) => filter: grayscale(100%);-webkit-filter: grayscale(100%);
+*/
+/*
+* @description This mixin is used to create animation
+* Pass animation name percentage E.g @include animation(slideIn) => ;animation-name: slideIn; -webkit-animation-name: slideIn
+*/
+/*
+* @description This mixin is used to create animation duration
+* Pass animation name percentage E.g @include animation-duration(1s) => animation-duration: 1s; -webkit-animation-duration: 1s;
+*/
+/*
+* @description This mixin is used to create animation function 
+* Pass animation timing function E.g @include animation-function(cubic-bezier(0.81, 0.15, 0.26, 0.99)) => animation-timing-function: cubic-bezier(0.81, 0.15, 0.26, 0.99); -webkit-animation-timing-function: cubic-bezier(0.81, 0.15, 0.26, 0.99);
+*/
+/*
+* @description Get theme color
+* Pass object and key of obj, Get value from variables 
+*/
+/*
+* Convert px to rem Unit
+*/
+/**
+* ----------------------------------------------
+* Grediant CODES
+* ----------------------------------------------
+*
+*/
+del {
+  color: #DE4313;
+}
+
+a:hover {
+  color: #F79B22;
+}
+
+.gred-bottom-line h2:after {
+  background-image: linear-gradient(90deg, #F79B22 0%, #DE4313 100%);
+}
+
+.scroll-top:hover .scroll-top-icon {
+  background-color: #F79B22;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: #F79B22;
+}
+
+.text-primary {
+  color: #F79B22 !important;
+}
+
+.text-secondary {
+  color: #DE4313 !important;
+}
+
+.text-grediant {
+  background-image: linear-gradient(to right, #DE4313 0%, #F79B22 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.grediant-overlay {
+  background-image: linear-gradient(90deg, #F79B22 0%, #DE4313 100%);
+}
+
+.grediant-overlay-rev {
+  background-image: linear-gradient(to right, #DE4313 0%, #F79B22 100%);
+}
+
+.bg-grediant {
+  background-image: linear-gradient(90deg, #F79B22 0%, #DE4313 100%);
+  color: #ffffff;
+}
+
+.bg-primary {
+  background: #F79B22 !important;
+}
+
+.bg-secondary {
+  background: #DE4313 !important;
+}
+
+.close:hover {
+  color: #F79B22;
+}
+
+.more-link:after {
+  background: #F79B22;
+}
+.more-link:hover {
+  color: #F79B22;
+}
+
+.btn:hover {
+  box-shadow: 0 10px 30px -7px rgba(247, 155, 34, 0.5);
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+}
+
+.btn-primary {
+  background-image: linear-gradient(122deg, #DE4313 0%, #F79B22 100%);
+  color: #ffffff;
+  border: none;
+}
+.btn-primary:hover {
+  color: #ffffff;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active {
+  background-image: linear-gradient(122deg, #DE4313 0%, #F79B22 100%);
+  color: #ffffff;
+}
+
+.btn-outline-primary {
+  border: 1px solid transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #DE4313, #F79B22);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  color: #000000;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  border-color: transparent;
+  background-color: #F79B22;
+  background-image: linear-gradient(to right, #DE4313 0%, #F79B22 100%);
+  background-clip: border-box, padding-box;
+  background-origin: border-box;
+  color: #ffffff;
+  box-shadow: 0px 4px 20px 0px rgba(38, 59, 94, 0.1);
+}
+
+.faq-card .faq-card-header h5:not(.collapsed) {
+  color: #F79B22;
+}
+
+.btn-outline-white:hover {
+  color: #F79B22;
+  background: #ffffff;
+}
+
+.btn-white {
+  color: #F79B22;
+}
+
+.preloader .bar-loader span {
+  background: #F79B22;
+}
+
+.header.link-nav.fixed-nav .navbar-nav .nav-link.active, .header.link-nav.fixed-nav .navbar-nav .nav-link:hover {
+  color: #F79B22;
+}
+
+.owl-carousel .owl-dots .owl-dot:hover:after, .owl-carousel .owl-dots .active:after {
+  background: #F79B22;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  color: #F79B22;
+}
+
+.swiper-slider-button .slider-button-prev, .swiper-slider-button .slider-button-next {
+  color: #F79B22;
+}
+
+.header.fixed-nav .btn-white {
+  background-image: linear-gradient(122deg, #DE4313 0%, #F79B22 100%);
+  color: #ffffff;
+}
+.header.fixed-nav .btn-white:hover {
+  border-color: transparent;
+}
+
+.header.line-nav.fixed-nav .navbar-nav .nav-link.active, .header.line-nav.fixed-nav .navbar-nav .nav-link:hover {
+  color: #F79B22;
+}
+.header.line-nav.fixed-nav .navbar-nav .nav-link.active:after, .header.line-nav.fixed-nav .navbar-nav .nav-link:hover:after {
+  background: #F79B22;
+}
+
+.footer-nav .navbar-nav .nav-link:hover {
+  color: #F79B22;
+}
+
+.app-service-card-2 .icon-bg-img i {
+  background-color: #DE4313;
+}
+.app-service-card-2:before {
+  border-color: #F79B22;
+}
+.app-service-card-2:after {
+  background: #F79B22;
+}
+
+.pricing-card-box-4 {
+  background-color: rgba(247, 155, 34, 0.05);
+}
+.pricing-card-box-4:hover {
+  background-image: linear-gradient(90deg, #F79B22 0%, #DE4313 100%);
+  color: #ffffff;
+}
+.pricing-card-box-4:hover del, .pricing-card-box-4:hover .text-primary, .pricing-card-box-4:hover .text-secondary {
+  color: #ffffff !important;
+}
+.pricing-card-box-4:hover .btn-primary {
+  background: #ffffff;
+  color: #F79B22;
+}
+
+.video-btn a {
+  color: #F79B22;
+}
+.video-btn a:hover {
+  background: #F79B22;
+  color: #ffffff;
+}
+/*# sourceMappingURL=../maps/app.2.css.map */

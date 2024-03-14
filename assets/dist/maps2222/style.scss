@@ -1,0 +1,143 @@
+/*-----------------------------------------------------------
+* Template Name    : Letstart | Portfolio
+* Author           : Matrr Digital
+* Version          : 1.0.0
+* Created          : Dec 2019
+* File Description : This File Includes all SCSS File
+*------------------------------------------------------------
+
+* =======================================
+*     TABLE OF CONTENTS
+* =======================================
+
+1) Google font's (roboto, barlow, open sans, poppins) 
+2) variable
+3) mixin
+4) function
+5) rest/base
+6) preloader
+7) blog
+8) blog list
+9) login
+10) lockscreen
+11) coming soon
+12) contact us
+13) general
+14) parallax
+15) video
+16) background classes(bg 1 to 10 and others)
+17) spacing
+18) opacity classes (1 to 10)
+19) fullscreen
+20) form reset
+21) Pswp plugin reset
+22) overlay
+23) scroll top
+24) arrow down
+25) section heading
+26) button
+27) page animation
+28) social link
+29) carousel css
+30) header and sidebar
+31) banner
+32) footer
+33) newsletter
+34) about us sections's
+35) services sections's
+36) counter sections's
+37) portfolio sections's
+38) testimonials sections's
+39) pricing sections's
+40) teams sections's
+41) blogs sections's
+42) contact us sections's
+43) app page
+
+*/
+
+/*----------------------------------
+* Google Font's
+----------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500|Poppins:200,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,500,600,700|Open+Sans:300,400|Roboto+Slab:300,400,700");
+
+/*----------------------------------
+* Base import's
+----------------------------------*/
+@import "../vendors/bootstrap/scss/mixins";
+@import "../vendors/bootstrap/scss/functions";
+@import "../vendors/bootstrap/scss/variables";
+
+@import "general/base/variables";
+@import "general/utils/mixins";
+@import "general/utils/functions";
+@import "../vendors/bootstrap/scss/bootstrap";
+
+
+@import 'components/backgrounds';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/text';
+@import 'components/pagination';
+
+@import "general/base/reset";
+@import "general/base/preloader";
+@import "general/base/scrolltop";
+
+//helpers
+@import 'helpers/common';
+@import 'helpers/spacing';
+@import 'helpers/opacity';
+@import 'helpers/animations';
+
+//plugins reset css
+@import 'plugins/parallax';
+@import 'plugins/photoswipe';
+@import 'plugins/swiper';
+@import 'plugins/owl-carousel';
+
+//base css
+@import "helpers/header";
+@import "helpers/sidebar";
+@import "helpers/footer";
+
+
+@import 'sections/video';
+@import 'sections/fullscreen';
+@import "sections/home-banners";
+@import "sections/page-banners";
+@import "sections/aboutus";
+@import "sections/services";
+@import "sections/counters";
+@import "sections/portfolio";
+@import "sections/testimonials";
+@import "sections/pricings";
+@import "sections/teams";
+@import "sections/faqs";
+@import "sections/blogs";
+@import "sections/contact-us";
+@import "sections/app";
+
+/*----------------------------------
+* blog
+----------------------------------*/
+@import 'blog';
+@import 'blog-list';
+
+/*----------------------------------
+* authentication
+----------------------------------*/
+@import 'auth';
+@import 'auth-2';
+@import 'lockscreen';
+
+/*----------------------------------
+* coming soon
+----------------------------------*/
+@import 'coming-soon';
+
+/*----------------------------------
+* contact us
+----------------------------------*/
+@import 'contact-us';

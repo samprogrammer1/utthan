@@ -1,0 +1,45 @@
+
+/**
+* ----------------------------------------------
+* FAQ css
+* ----------------------------------------------
+*/
+.faq-card{
+  // @include border(null, 2px, solid, transparent);
+  margin-bottom: 30px;
+  box-shadow: 0px 5px 30px 0px rgba(38, 59, 94, 0.1);
+  border-radius: 4px;
+  &:last-child{
+      margin-bottom: 0;
+  }
+  .faq-card-header{
+      background: none;
+      cursor: pointer;
+      h5{
+          display: flex;
+          align-items: center;
+          padding: 20px 30px;
+          .fa-plus{
+            display: none;
+          }
+          .fa-minus{
+            display: inline-block;
+          }
+          &.collapsed{
+            .fa-plus{
+              display: inline-block;
+            }
+            .fa-minus{
+              display: none;
+            }
+          }
+      }
+      span{
+          line-height: 1;
+          margin-right: 15px;
+      }
+  }
+  .faq-card-body{
+    padding: 15px 30px 30px;
+  }
+}

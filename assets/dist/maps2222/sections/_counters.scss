@@ -1,0 +1,109 @@
+
+
+/**
+* ----------------------------------------------
+* Counter section css
+* ----------------------------------------------
+*/
+.counter-section {
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+  @media (max-width: 991px) {
+    background-attachment: unset;
+  }
+}
+
+.counter-section-2{
+  background-attachment: fixed;
+  color: #fff;
+  position: relative;
+  padding: 100px 50px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1024px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @media (max-width: 991px) {
+    background-attachment: unset;
+  }
+  @media (max-width: 767px){
+    padding: 100px 0;
+  }
+}
+
+.counter-box-1 {
+  display: flex;
+  box-shadow: $box-shadow-2;
+  padding: 24px;
+  align-items: center;
+  border-radius: 4px;
+  .icon {
+    width: 56px;
+    height: 56px;
+    background-color: rgba($blue, 0.2);
+    color: $blue;
+    display: flex;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+}
+
+
+.counter-box-2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  padding: 30px 30px 0;
+  border-radius: 5px;
+  text-align: center;
+  @media (max-width: 767px){
+    padding: 30px 0;
+  }
+  .counter {
+    font-size: 2rem;
+    width: auto;
+    line-height: 1;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: $white;
+  }
+}
+
+.counter-box-3 {
+  padding: 15px;
+  @include border(null, 1px, solid, darken($border-color, 1));
+  border-radius: 5px;
+  @include transition(all 0.5s);
+  .counter{
+    margin: 10px 0 5px 0;
+  }
+  &:hover{
+    border-color: $theme-color-4;
+  }
+}
+
+.counter-box-4 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  @include border(null, 2px, solid, $white);
+  padding: 2rem;
+  border-radius: 5px;
+  @media (max-width: 991px) {
+    height: 100%;
+    padding: 1rem;
+  }
+  .counter {
+    width: auto;
+    line-height: 1;
+    margin: 1rem 0 0 0;
+    color: $white;
+  }
+}

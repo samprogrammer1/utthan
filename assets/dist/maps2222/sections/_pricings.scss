@@ -1,0 +1,307 @@
+
+/**
+* ----------------------------------------------
+* Pricing section css
+* ----------------------------------------------
+*/
+.pricing-card-box-1 {
+  background-image: linear-gradient(156.97deg, rgba($orange, 0.06) -26.3%, rgba($warning, 0.06) 122.05%);
+  @include transition(all 0.4s);
+  .pricing-header {
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    .plan-title {
+      margin-bottom: 1.5rem;
+    }
+    .plan-price {
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: 300;
+      sup {
+        font-size: 4rem;
+        margin-right: 3px;
+        left: 0;
+        top: 0;
+        opacity: 0.9;
+      }
+      small {
+        font-size: 1rem;
+      }
+    }
+    .price-month {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+  .pricing-body {
+    padding: 2rem;
+    .list-unstyled {
+      li {
+        padding: 0.6rem 0;
+        @include border(bottom, 1px, solid, $border-color);
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.pricing-card-box-2 {
+  border-radius: 5px;
+  @include transition(all 0.5s);
+  .pricing-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 2rem 1.5rem;
+    @media (max-width: 991px) {
+      padding: 2rem 1rem;
+    }
+    .plan-title {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 1rem;
+      @include border(bottom, 2px, solid, $gray-300);
+    }
+  }
+  .plan-price {
+    @include border(bottom, 2px, solid, $gray-300);
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+    @media (max-width:991px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .price{
+      float: left;
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-right: 1rem;
+      @media (max-width:991px) {
+        display: flex;
+        align-items: flex-end;
+      }
+      h3{
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-left: -15px;
+        @media (max-width:991px) {
+          margin-right: 0.5rem;
+        }
+        sup {
+          top: -0.5rem;
+          margin-right: 3px;
+          left: 15px;
+        }
+      }
+      span{
+        text-transform: uppercase;
+      }
+    }
+    .price-text{
+      p{
+        line-height: 1.6;
+      }
+    }
+  }
+  .pricing-body {
+    ul{ 
+     padding:0 1.5rem 2rem;
+     @media (max-width: 991px) {
+      padding: 0 1.5rem 1rem;
+    }
+     li {
+        padding: 0.5rem 0;
+        i{
+          margin-right: 0.5rem;
+          &.icon-check{
+            color: green;
+          }
+          &.icon-close{
+            color: red;
+          }
+        }
+      }
+    }
+  }
+  .pricing-footer{
+    .btn{
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      text-align: left;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.pricing-card-box-3 {
+  border-radius: 5px;
+  background: $white;
+  padding: 30px;
+  .pricing-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    .plan-title {
+      margin-bottom: 1rem;
+      position: relative;
+      padding-bottom: 1rem;
+      @include border(bottom, 2px, solid, $border-color);
+    }
+  }
+  
+  .plan-price {
+    display: flex;
+    flex-direction: column;
+    .price{
+      float: left;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      h3{
+        font-size: 4rem;
+        line-height: 1;
+        font-weight: 500;
+        margin-left: -15px;
+        font-weight: 300;
+        sup {
+          top: -0.5rem;
+          margin-right: 3px;
+          left: 15px;
+        }
+      }
+      span{
+        text-transform: uppercase;
+      }
+    }
+    .price-text{
+      margin-bottom: 1rem;
+      p{
+        line-height: 1.6;
+      }
+    }
+  }
+  
+  .pricing-body {
+    ul{ 
+     padding:2rem 0;
+     li {
+        padding: 0.5rem 0;
+        i{
+          margin-right: 0.5rem;
+          &.icon-check{
+            color: green;
+          }
+          &.icon-close{
+            color: red;
+          }
+        }
+      }
+    }
+  }
+  .pricing-footer{
+    .btn{
+      margin: 0;
+      border-radius: 5px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.pricing-card-box-4 {
+  border-radius: 8px;
+  background: $white;
+  padding: 30px;
+  @include transition(all 0.5s);
+  .pricing-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    .large-heading {
+      line-height: 1.5;
+    }
+  }
+  .pricing-body {
+    ul{ 
+     padding:0 30px 30px;
+     @media (max-width: 991px) {
+      padding: 0 1.5rem 1rem;
+    }
+     li {
+        padding: 0.5rem 0;
+        i{
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.pricing-card-box-5 {
+  @include transition(all 0.4s);
+  .pricing-header {
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    .plan-title {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      &:after {
+        width: 80px;
+        @include position(absolute, null, null, 0, 0);
+        height: 1px;
+        background-color: $white;
+        margin: 0 auto;
+        content: "";
+        opacity: 0.7;
+      }
+    }
+    .plan-price {
+      font-size: 4rem;
+      line-height: 1;
+      font-weight: 300;
+      sup {
+        font-size: 4rem;
+        margin-right: 3px;
+        left: 0;
+        top: 0;
+        opacity: 0.9;
+      }
+      small {
+        font-size: 1rem;
+      }
+    }
+    .price-month {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+  .pricing-body {
+    padding: 30px;
+    .list-unstyled {
+      li {
+        padding: 0.6rem 0;
+        @include border(bottom, 1px, solid, $border-color);
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+/**
+* ----------------------------------------------
+* About us  css
+* ----------------------------------------------
+*/
+.excellance-tag {
+  @include border(null, 5px, solid, $white);
+  color: $white;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  margin-top: -100px;
+  position: relative;
+  left: 50%;
+  @include transform(translateX(-50%));
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  .excellance-text {
+    padding: 20px;
+    @include border(null, 1px, solid, $border-color);
+  }
+  .icon {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: $white;
+    line-height: 1;
+    font-size: 3rem;
+  }
+  p {
+    line-height: 1;
+  }
+  small {
+    font-size: 70%;
+  }
+}
+
+.our-step {
+  padding: 30px;
+  .step-number {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 1.75rem;
+  }
+}
+
+.our-step-2 {
+  padding: 60px 30px;
+  .step-number {
+    justify-content: flex-start;
+    font-size: 2.75rem;
+    font-weight: 700;
+  }
+  &.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.feature-card {
+  padding: 60px 45px;
+  @include transition(all 0.5s);
+  .icon-img {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    @include transition(all 0.3s);
+  }
+}
+
+.feature-card-2 {
+  padding: 10px 15px 15px;
+  .icon-img {
+    border: none; position: relative;
+    &:after {
+      content: '';
+      border: 10px solid transparent;
+      @include position(absolute, -10px, 0, 0, -10px);
+      width: 84px;
+      height: 84px;
+      @include transition(all 0.5s);
+      border-radius: 100%;
+    }
+  }
+  &:hover {
+    .icon-img {
+      &:after {
+        border-width: 5px;
+      }
+    }
+  }
+}
+
+
+@each $key, $value in $theme-colors {
+  
+  .feature-card-#{$key} {
+    .icon-img {
+      border-color: $value;
+      color: $value;
+    }
+    &:hover {
+      .icon-img {
+        background-color: rgba($value, 0.1);
+        border-color: transparent;
+      }
+    }
+  }
+  .feature-card-2-#{$key} {
+    .icon-img:after {
+      border-color: rgba($value, 0.2);
+    }
+  }
+}
+
+.about-us-theme-3 {
+  @media (min-width:1025px) {
+    background-color: $light;
+  }
+  .about-us-content {
+    padding: 45px 60px;
+    margin-left: 0;
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+    @media (min-width: 1025px) {
+      width: 90%;
+      float: right;
+      margin-right: -100px;
+      padding: 3rem 7rem;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding: 30px;
+      margin: 0;
+      text-align: center;
+    }
+    @media (max-width: 1024px) {
+      height: 100%;
+      border-radius: 0;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+    .fw-medium{
+      h2 {
+        font-weight: 500;
+      }
+    }
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  &.right {
+    .about-us-content {
+      margin-right: 0;
+      @media (min-width: 1025px) {
+        float: left;
+        margin-left: -100px;
+      }
+      @media (max-width: 767px) {
+        margin: 0;
+        background: $light;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+  &.full-block {
+    .about-us-content {
+      padding: 30px;
+      margin: 0;
+      width: 100%;
+      background: none;
+    }
+    &.bg-light {
+      @media (min-width: 768px) {
+        background-color: $white !important;
+      }
+    }
+  }
+}
+
+.skills-progress {
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  position: relative;
+  border-radius: 4px;
+  span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: $theme-color-4;
+    width: 10%;
+    border-radius: 10px;
+    transition: all 1s;
+    &:after {
+      content: attr(data-value);
+      position: absolute;
+      top: -20px;
+      right: 0;
+      font-size: 10px;
+      color: #777;
+      opacity: 0;
+      @include transition(all 1s);
+    }
+    &.show-width {
+      &:after {
+        opacity: 1;
+        @include transition(all 1s);
+      }
+    }
+  }
+}
+
+.skills {
+  .prog-item {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      font-size: px-rem-converter($grid-title-font-size);
+      margin-bottom: 5px;
+    }
+  }
+
+  &.skills-large {
+    .prog-item {
+      p {
+        font-size: $default-font-size;
+      }
+    }
+    .skills-progress {
+      height: 10px;
+      span {
+        &:after {
+          font-size: $default-font-size;
+          top: -25px;
+        }
+      }
+    }
+  }
+}

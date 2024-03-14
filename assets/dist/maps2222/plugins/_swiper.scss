@@ -1,0 +1,140 @@
+
+/**
+* ----------------------------------------------
+* Owl carousel plugin reset css
+* ----------------------------------------------
+*/
+.slide-animation-block{
+  .content-animation{
+     & > *{
+      @include transform(translateY(40px));
+      @include transition(all 0.75s);
+      opacity: 0;
+    }
+    h2 {
+      transition-delay: 0.4s;
+    }
+    p{
+      
+      transition-delay: 0.6s;
+    }
+    a{
+      
+      transition-delay: 0.8s;
+      &:hover{
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+
+.swiper-slide-active{
+  &.slide-animation-block{
+    .content-animation{
+      & > *{
+        @include transform(translateY(0));
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.swiper-pagination{
+  margin-top: 2rem;
+  position: relative;
+  .swiper-pagination-bullet{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    &:focus{
+      outline: none;
+    }
+  }
+  &.pagination-white{
+    .swiper-pagination-bullet{
+      background: $white;
+      opacity: 1;
+    }
+  }
+}
+
+.swiper-pagination.swiper-number-pagination{
+  counter-reset: pages;
+  bottom: auto;
+  top: 20px;
+  left: 50px;
+  position: absolute;
+  @include transform(translate(0));
+  margin-top: 0;
+  .swiper-pagination-bullet{
+    position: relative;
+    opacity: 0.3;
+    margin: 0;
+    min-height: 20px;
+    width: 50px;
+    background: none;
+    &:focus{
+      outline: none;
+    }
+    &:after{
+      content: counter(pages, decimal-leading-zero);
+      counter-increment: pages;
+      @include position(absolute,0,null,0,16px);
+      margin: auto 0;
+      line-height: 2rem;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      color: $white;
+      font-size: px-rem-converter($author-size);
+      @include transition(all 0.4s);
+    }
+    &:before{
+      content: '';
+      @include position(absolute,0,0,0,null);
+      width: 15px;
+      background: $white;
+      max-height: 1px;
+      margin: auto 0;
+      @include transition(width 0.4s);
+    }
+    &:hover, &.swiper-pagination-bullet-active{
+      opacity: 0.9;
+      &:before{
+        width: 30px;
+      }
+      &:after{
+        left: 0;
+      }
+    }
+  }
+  &.bottom-right{
+    bottom: 20px;
+    top: auto;
+    right: 50px;
+    left: auto;
+    @include transform(translate(0));
+  }
+}
+
+
+.swiper-slider-button {
+  text-align: center;
+  margin-top: 30px;
+  .slider-button-prev,.slider-button-next{
+    display: inline-block;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
+    i{
+      font-size: 3rem;
+    }
+  }
+  .slider-button-prev{
+    margin-right: 1rem;
+    &.disabled{
+      opacity: 0.6;
+    }
+  }
+}

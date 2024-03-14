@@ -1,0 +1,186 @@
+
+/**
+* ----------------------------------------------
+* Banner css
+* ----------------------------------------------
+*/
+.home-slide-content{
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.slider-container{
+  color: $white;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+  &.creative-slider{
+    .center-col{
+      @media (max-width: 767px) {
+        left: 50px;
+        right: 50px;
+      }
+    }
+    
+    .owl-carousel {
+      .owl-dots {
+        @include position(absolute, 50%, null, null, 15px);
+        @include transform(translateY(-50%));
+        width: 30px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .owl-dot {
+          margin-right: 0;
+          margin-bottom: 15px;
+          background: none;
+          border: 2px solid $white;
+          width: 15px;
+          height: 15px;
+          &:after {
+            @include position(absolute, 12px, 0, null, 0);
+            margin: 0 auto;
+            width: 3px;
+            height: 16px;
+            background: $white;
+            border-radius: 0;
+            content: "";
+            opacity: 1;
+            visibility: visible;
+            @include transform(translateY(0));
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+          &.active {
+            width: 18px;
+            height: 18px;
+            background: $white;
+            &:after {
+              top: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-pagination.swiper-number-pagination{
+      bottom: 20px;
+      top: auto;
+      .swiper-pagination-bullet{
+        opacity: 0.6;
+        border: none;
+        height: 30px;
+        width: 25px;
+        &:before{
+          bottom: -14px;
+          width: 1px;
+          height: 20px;
+          max-height: 20px;
+          margin: 0 auto;
+          top: auto;
+          left: 0;
+          @include transition(height 0.4s);
+        }
+        &:after{
+          left: 0;
+          justify-content: center;
+          right: 0;
+        }
+        &:hover, &.active{
+          opacity: 1;
+          &:before{
+            height: 25px;
+            max-height: 25px;
+          }
+          &:after{
+            top: -15px;
+          }
+        }
+      }
+    }
+
+    .owl-item {
+      h2, p, a {
+        opacity: 0;
+        @include transition(all 0.3s ease-in-out);
+      }
+      h2 {
+        @include transform(translateY(30px));
+      }
+      p {
+        @include transform(translateY(20px));
+      }      
+      a {
+        @include transform(translateY(10px));
+      }
+      &.active {
+        h2, p, a {
+          opacity: 1;
+          @include transform(translateY(0));
+        }
+        p {
+          transition-delay: 0.4s 
+        }
+        a {
+          transition: opacity 0.3s ease-in-out 0.7s, transform 0.3s ease-in-out 0.7s;
+        } 
+      }
+    }
+  }
+}
+
+.home-bg-video{
+  @include position(absolute, 0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  .jarallax{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.home-banner {
+  padding-top: 180px;
+  .banner-thumb {
+    @include position(absolute, 0, 0, 0, null);
+    text-align: right;
+    width: 50%;
+    display: flex;
+    @media (max-width: 991px) {
+      position: static;
+      padding-top: 30px;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .center-col {
+    @media (max-width: 991px) {
+      position: static;
+      margin-top: 0;
+      transform: translateY(0);
+    }
+  }
+  .lead {
+    color: $default-color;
+  }
+  h6 {
+    position: relative;
+    padding-bottom: 8px;
+    &:after {
+      @include position(absolute, null, null, 0, 0);
+      width: 50px;
+      height: 2px;
+      background-color: $theme-color-7;
+      content: "";
+    }
+  }
+}

@@ -1,0 +1,112 @@
+
+/**
+* ----------------------------------------------
+* Service section css
+* ----------------------------------------------
+*/
+.service-card {
+  padding: 45px 30px;
+  @include transition(all 0.5s);
+  &:hover{
+    box-shadow: $box-shadow-2;
+  }
+}
+
+.services-slider{
+  .our-step-2{
+    opacity: 0.6;
+    @include transition(all 0.3s);
+    animation-delay: 0.2s;
+    transition-duration: 800ms;
+    margin: 20px 0;
+    &:hover{
+      box-shadow: $box-shadow-2;
+      animation-name: fadeInUp;
+    }
+  }
+  &.right-50{
+    .owl-stage{
+      right: 50px;
+      @media (max-width: 1024px){
+        right: 30px;
+      }
+      @media (max-width: 767px){
+        right: 0;
+      }
+    }
+  }
+  .active{
+    .our-step{
+      opacity: 1;
+    }
+  }
+}
+
+
+.app-service-card-2 {
+  margin-bottom: 30px;
+  padding: 30px;
+  background: $white;
+  box-shadow: 0px 0px 33px 8px rgba(68, 88, 220,0.09);
+  position: relative;
+  z-index: 2;
+  border-radius: 5px;
+  text-align: right;
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+  .icon-img {
+    margin-bottom: 10px;
+  }
+  .icon-bg-img{
+    i{
+      border-radius: 100%;
+      padding: 10px;
+      color: $white;
+    }
+  }
+  .service-body{
+    h4 {
+      margin: 20px 0 18px 0;
+      position: relative;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+  }
+  
+  &:before {
+    @include position(absolute, 50%, -140px, null, null);
+    width: 135px;
+    @include border(bottom, 1px, dashed, transparent);
+    content: "";
+    height: 2px;
+    @include transform(translateY(-50%));
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &:after {
+    @include position(absolute, 50%, -140px, null, null);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: transparent;
+    content: "";
+    @include transform(translateY(-50%));
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  &.left{
+    text-align: left;
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+    &:before,
+    &:after {
+      left: -140px;
+      right: auto;
+    }
+  }
+}

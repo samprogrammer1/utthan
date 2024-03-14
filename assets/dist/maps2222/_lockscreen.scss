@@ -1,0 +1,34 @@
+/**
+* ----------------------------------------------
+* Lock screen content  css
+* ----------------------------------------------
+*/
+.lock-screen{
+    @include position(absolute, 50%, 0, null,0, 3);
+    width: 300px;
+    margin: 0 auto;
+    @include transform(translateY(-50%));
+    text-align: center;
+    // input box lock screen
+    .form-control{
+        @include border(null, 1px, solid, $border-color);
+        background: none;
+        &:focus{
+            border-color: $theme-color-3 !important;
+            & ~ *{
+                .input-group-text{
+                    border-color: $theme-color-3;
+                    border-left: none;
+                }
+            }
+        }
+    }
+    //Background image data
+    &.bg-screen{
+        color: $black;
+        .form-control{
+            color: $black;
+            border-color: $black;
+        }
+    }
+}

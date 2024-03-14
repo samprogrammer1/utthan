@@ -1,0 +1,43 @@
+
+/**
+* ----------------------------------------------
+* Fullscreen  css
+* ----------------------------------------------
+*/
+
+.fullscreen-banner {
+  @include position(absolute, 0, 0, 0, 0);
+}
+
+.fullscreen{
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  .center-col{
+    @include position(absolute, 50%, 0, null, 0, 3);
+    @include transform(translateY(-50%));
+    margin-top: 20px;
+    @media (max-width: 1024px){
+      left: 15px;
+      right: 15px;
+    }
+  }
+  &.static-header{
+    min-height: calc(100vh - 72px);
+  }
+  &.no-header{
+    .center-col{
+      margin-top: 0;
+    }
+  }
+}
+
+.letter-header {
+  .center-col{
+    @media(max-width: 767px){
+      position: static;
+      @include transform(translate(0));
+    }
+  }
+}
+

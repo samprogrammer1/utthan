@@ -1,0 +1,49 @@
+
+/**
+* ----------------------------------------------
+* Pswp plugin reset
+* ----------------------------------------------
+*/
+.pswp-caption {
+  display: none;
+}
+.pswp__img {
+  border-radius: 12px;
+}
+.pswp__custom-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 44px;
+  padding: 15px 0;
+  max-width: 1140px;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  right: 0;
+  h5 {
+    color: $white;
+    margin: 8px 0;
+  }
+  p {
+    color: $white;
+    opacity: 0.8;
+  }
+}
+.pswp__caption__center {
+  padding: 0;
+  max-width: 1140px;
+  text-align: center;
+  h4 {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+  h4,
+  p {
+    color: $white;
+  }
+}

@@ -1,0 +1,272 @@
+
+@import "general/base/variables";
+@import "general/utils/mixins";
+@import "general/utils/functions";
+
+$theme-color:  #F79B22;
+$secondary-color: #DE4313;
+
+
+/**
+* ----------------------------------------------
+* Grediant CODES
+* ----------------------------------------------
+*
+*/
+// linear-gradient(145deg, #F79B22 0%, #DE4313 100%)
+$btn-gred: linear-gradient( 122deg, #DE4313 0%, #F79B22 100%);
+$gradient-overlay: linear-gradient(90deg, #F79B22 0%, #DE4313 100%);
+$text-gradient: linear-gradient(to right, #DE4313 0%, #F79B22 100%);
+$btn-outline-gred: linear-gradient(white, white), radial-gradient(circle at top left, #DE4313, #F79B22);
+
+del{
+    color: $secondary-color;
+}
+
+a{
+    &:hover{
+        color: $theme-color;
+    }
+}
+
+.gred-bottom-line{
+    h2{
+        &:after{
+            background-image: $gradient-overlay;
+        }
+    }
+}
+
+.scroll-top{
+    &:hover{
+        .scroll-top-icon {
+            background-color: $theme-color;
+        }
+    }
+}
+
+.progress-wrap svg.progress-circle path {
+    stroke: $theme-color;
+}
+
+.text-primary{
+    color: $theme-color !important;
+}
+
+.text-secondary{
+    color: $secondary-color !important;
+}
+
+.text-grediant {
+    @include text-gradient($text-gradient);
+}
+
+.grediant-overlay {
+    background-image: $gradient-overlay;
+}
+
+.grediant-overlay-rev {
+    background-image: $text-gradient;
+}
+
+.bg-grediant{
+    background-image: $gradient-overlay;
+    color: $white;
+}
+
+.bg-primary{
+    background: $theme-color !important;
+}
+.bg-secondary{
+    background: $secondary-color !important;
+}
+
+.close {
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+.more-link {
+    &:after {
+        background: $theme-color;
+    }
+    &:hover {
+        color: $theme-color;
+    }
+}
+
+.btn:hover {
+    box-shadow: 0 10px 30px -7px rgba($theme-color, 0.5);
+    @include transform(translateY(-4px));
+}
+
+.btn-primary {
+    @include gradient($btn-gred);
+    color: $white;
+    border: none;
+    &:hover{
+        color: $white;
+    }
+    &:not(:disabled) {
+        &:not(.disabled) {
+            &.active,
+            &:active {
+            @include gradient($btn-gred);
+            color: $white;
+            }
+        }
+    }
+}
+
+.btn-outline-primary {
+    @include border(null, 1px, solid, transparent);
+    @include gradient($btn-outline-gred,padding-box, border-box, border-box);
+    color: $black;
+    &:hover,&:focus,&:active {
+      border-color: transparent;
+      background-color: $theme-color;
+      @include gradient($text-gradient,border-box, padding-box,border-box);
+      color: $white;
+      box-shadow:$box-shadow;
+    }
+}
+
+
+.faq-card{
+    // @include gradient($btn-outline-gred, padding-box, border-box, border-box);
+    // border-color: $secondary-color;
+    .faq-card-header h5:not(.collapsed){
+        color: $theme-color;
+    }
+}
+
+.btn-outline-white{
+    &:hover{
+        color: $theme-color;
+        background: $white;
+    }
+}
+
+.btn-white{
+    color: $theme-color;
+}
+
+.preloader {
+    .bar-loader {
+        span{
+            background: $theme-color;
+        }
+    }
+}
+
+.header {
+    &.link-nav{
+        &.fixed-nav{
+            .navbar-nav {
+                .nav-link {
+                    &.active,
+                    &:hover {
+                    color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.owl-carousel { 
+    .owl-dots{
+        .owl-dot:hover, .active{
+        &:after{
+            background: $theme-color;
+        }
+        }
+    }
+    .owl-nav {
+        button.owl-next,
+        button.owl-prev {
+        color: $theme-color;
+        }
+    }
+}
+
+.swiper-slider-button{
+    .slider-button-prev,.slider-button-next{
+        color: $theme-color;
+    }
+}
+
+.header{
+    &.fixed-nav {
+        .btn-white{ 
+            background-image: $btn-gred;
+            color: $white;
+            &:hover{
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+.header.line-nav.fixed-nav {
+    .navbar-nav .nav-link{
+        &.active, &:hover{
+            color: $theme-color;
+            &:after{
+                background: $theme-color;
+            }
+        }
+    }
+}
+
+
+.footer-nav{
+    .navbar-nav{
+        .nav-link{
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+}
+
+.app-service-card-2 {
+    .icon-bg-img{
+        i{
+            background-color: $secondary-color;
+        }
+    }
+    &:before {
+        border-color: $theme-color;
+    }
+    &:after{
+        background: $theme-color;
+    }
+}
+
+.pricing-card-box-4 {
+    background-color: rgba($theme-color, 0.05);
+    &:hover {
+        background-image: $gradient-overlay;
+        color: $white;
+        del, .text-primary, .text-secondary {
+            color: $white !important;
+        } 
+        .btn-primary {
+            background: $white;
+            color: $theme-color;
+        }
+    }
+}
+
+.video-btn{
+    a{
+        color: $theme-color;
+        &:hover{
+            background: $theme-color;
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,400 @@
+/**
+ * ----------------------------------------------
+ * Font Faces
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * Font Sizes
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * COLOR CODES
+ * ----------------------------------------------
+ *
+*/
+/**
+* ----------------------------------------------
+* Shadows CODES
+* ----------------------------------------------
+*
+*/
+/**
+ * ----------------------------------------------
+ * Loop classes
+ * ----------------------------------------------
+ *
+*/
+/**
+ * ----------------------------------------------
+ * Theme colors
+ * ----------------------------------------------
+ *
+*/
+/*
+* @description Set transition
+* Pass transition single properties E.g @include transition(border 0.3s ease-in-out) => transition: border 0.3s ease-in-out; -webkit-transition: border 0.3s ease-in-out;
+*/
+/*
+* @description Set transform
+* Pass transform value E.g @include transform(scale(0.3)) => transform: scale(0.3); -webkit-transform: scale(0.3);
+*/
+/*
+* @description Set delay in transition
+* Pass transition delay E.g @include transition-delay(1s) => transition-delay: 1s; -webkit-transition-delay: 1s.
+*/
+/*
+* @description This mixin is used to create position
+* Pass position like absolute, fixed etc. and give top, bottom, left, right, index.
+* All params are optional, After passing all things it's generate the css.
+* E.g @include position(absolute, 10px, 10px, 10px, 10px, 1) => position: absolute;top:10px;bottom:10px;left:10px;right:10px;index:1;
+* Another E.g @include position(absolute, 10px, 10px, 10px, 10px) => position: absolute;top:10px;bottom:10px;left:10px;right:10px;
+*/
+/*
+* @description This mixin is used to create border
+* Pass direction like top, bottom, left, right and give width of the border, style of border like solid, dashes etc, color of the border and pass null if you want border all the sides. E.g @include border(null, 1px, solid, #000) => border: 1px solid #000;
+* Another E.g @include border(left, 1px, solid, #000) => border-left: 1px solid #000;
+*/
+/*
+* @description This mixin is used to create grediant button
+* Pass grediant value, clip type, clip type 2, origin E.g @include gradient($gred) => background-image: $grad; ---> used to include grediant background
+* Another E.g @include gradient($gred,padding-box, border-box, border-box) => background-image: $grad;background-clip: padding-box, border-box; background-origin: border-box;---> this used to create button gred.
+*/
+/*
+* @description This mixin is used to create text grediant
+* Pass grediant value E.g @include text-gradient($gred) => background-image: $grad; -webkit-text-fill-color: transparent; -webkit-background-clip: text;
+*/
+/*
+* @description This mixin is used to create greyscale the image or others
+* Pass greyscale percentage E.g @include grayScale(100%) => filter: grayscale(100%);-webkit-filter: grayscale(100%);
+*/
+/*
+* @description This mixin is used to create animation
+* Pass animation name percentage E.g @include animation(slideIn) => ;animation-name: slideIn; -webkit-animation-name: slideIn
+*/
+/*
+* @description This mixin is used to create animation duration
+* Pass animation name percentage E.g @include animation-duration(1s) => animation-duration: 1s; -webkit-animation-duration: 1s;
+*/
+/*
+* @description This mixin is used to create animation function 
+* Pass animation timing function E.g @include animation-function(cubic-bezier(0.81, 0.15, 0.26, 0.99)) => animation-timing-function: cubic-bezier(0.81, 0.15, 0.26, 0.99); -webkit-animation-timing-function: cubic-bezier(0.81, 0.15, 0.26, 0.99);
+*/
+/*
+* @description Get theme color
+* Pass object and key of obj, Get value from variables 
+*/
+/*
+* Convert px to rem Unit
+*/
+/**
+* ----------------------------------------------
+* Grediant CODES
+* ----------------------------------------------
+*
+*/
+.owl-carousel .owl-dots .owl-dot:hover:after,
+.owl-carousel .owl-dots .active:after {
+  background: #4e5aff;
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  color: #4e5aff;
+}
+
+.testimonials-slider-1 .owl-dots .owl-dot.active {
+  border-color: #4e5aff;
+}
+
+.slick-slider-for:after, .slick-slider-for:before {
+  color: #4e5aff;
+}
+
+.slick-slider-nav:after, .slick-slider-nav:before {
+  color: #4e5aff;
+}
+.slick-slider-nav .slick-dots li button:after {
+  background-color: #4e5aff;
+}
+
+/**
+* ----------------------------------------------
+* Set base color, background's and button's color
+* ----------------------------------------------
+*
+*/
+a:hover {
+  color: #4e5aff;
+}
+
+.close:hover {
+  color: #4e5aff;
+}
+
+.more-link:after {
+  background: #4e5aff;
+}
+.more-link:hover {
+  color: #4e5aff;
+}
+
+.list-bullet li:before {
+  color: #4e5aff;
+}
+
+.preloader .bar-loader span {
+  background: #4e5aff;
+}
+
+.theme-section-bg {
+  background-color: rgba(78, 90, 255, 0.06);
+}
+
+.text-primary {
+  color: #4e5aff !important;
+}
+
+.bg-primary {
+  background: #4e5aff !important;
+}
+
+.bg-soft-primary {
+  background-color: rgba(78, 90, 255, 0.1) !important;
+}
+
+.bg-soft-primary-2 {
+  background-color: rgba(78, 90, 255, 0.2) !important;
+}
+
+.btn-primary {
+  background-color: #4e5aff !important;
+  border-color: #4e5aff !important;
+}
+
+.btn-outline-primary:hover {
+  border-color: #4e5aff !important;
+  background-color: #4e5aff !important;
+  color: #ffffff !important;
+}
+
+.btn-white {
+  color: #4e5aff;
+}
+
+.btn-outline-white:hover {
+  color: #4e5aff;
+  background: #ffffff;
+}
+
+.btn-navigate {
+  border-color: #222;
+  color: #222;
+}
+.btn-navigate:after {
+  color: #4e5aff;
+}
+.btn-navigate:hover {
+  color: #4e5aff;
+  border-color: #4e5aff;
+}
+
+.widget-search .input-group .btn-primary:hover {
+  background-color: #4e5aff !important;
+  color: #ffffff !important;
+}
+
+.pagination .page-item:hover .page-link, .pagination .page-item.active .page-link {
+  background-color: #4e5aff;
+}
+
+.video-btn a {
+  color: #4e5aff;
+}
+.video-btn a:hover {
+  background: #4e5aff;
+  color: #ffffff;
+}
+
+.scroll-top:hover .scroll-top-icon {
+  background-color: #4e5aff;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: #4e5aff;
+}
+.progress-wrap:after {
+  color: #4e5aff;
+}
+
+.header.black-nav .menu-arrow:after {
+  border-top-color: #4e5aff;
+}
+@media (max-width: 991px) {
+  .header.black-nav .menu-arrow:after {
+    border-left-color: #4e5aff;
+    border-top-color: transparent;
+  }
+}
+
+@media (max-width: 991px) {
+  .header.arrow-header .navbar-nav .nav-link.active,
+  .header.arrow-header .navbar-nav .nav-link:hover {
+    color: #4e5aff;
+  }
+}
+.header.fixed-nav .navbar-nav .nav-link.active,
+.header.fixed-nav .navbar-nav .nav-link:hover {
+  color: #4e5aff;
+}
+@media (max-width: 992px) {
+  .header.bottom-nav .navbar-nav .nav-link.active {
+    color: #4e5aff;
+  }
+}
+.header.bottom-nav.fixed-nav .navbar-nav .nav-link.active {
+  color: #4e5aff;
+}
+@media (max-width: 992px) {
+  .header.button-nav .navbar-nav .nav-link.active {
+    background-color: #4e5aff;
+  }
+}
+.header.button-nav.fixed-nav .navbar-nav .nav-link.active {
+  background-color: #4e5aff;
+}
+
+.list-diamond li:before {
+  background-color: #4e5aff;
+  border-color: #4e5aff;
+}
+
+.grediant-overlay,
+.bg-gred {
+  background-image: linear-gradient(to right, #4e5aff 2%, #7202bb 82%);
+}
+
+.grediant-overlay-reverse,
+.bg-reverse-gred {
+  background-image: linear-gradient(to right, #7202bb 2%, #4e5aff 82%);
+}
+
+.border-gred {
+  border-image: linear-gradient(to right, #4e5aff 2%, #7202bb 82%);
+  border-image-slice: 1;
+}
+
+.text-grediant {
+  background-image: linear-gradient(to right, #4e5aff 2%, #7202bb 82%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.btn-gred-primary {
+  background-image: linear-gradient(to right, #4e5aff 0%, #7202bb 51%, #4e5aff 100%);
+  color: #ffffff;
+}
+.btn-gred-primary:hover {
+  color: #ffffff;
+}
+.btn-gred-primary:not(:disabled):not(.disabled).active, .btn-gred-primary:not(:disabled):not(.disabled):active {
+  background-image: linear-gradient(to right, #4e5aff 0%, #7202bb 51%, #4e5aff 100%);
+  color: #ffffff;
+}
+
+.btn-gred-outline-primary {
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #4e5aff, #7202bb);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+}
+.btn-gred-outline-primary:hover, .btn-gred-outline-primary:focus, .btn-gred-outline-primary:active {
+  background-color: #4e5aff;
+  background-image: linear-gradient(to right, #4e5aff 0%, #7202bb 51%, #4e5aff 100%);
+  background-clip: border-box, padding-box;
+  background-origin: border-box;
+}
+
+.header.gred-bg.fixed-nav {
+  background-image: linear-gradient(to right, #4e5aff 2%, #7202bb 82%);
+}
+@media (max-width: 991px) {
+  .header.gred-bg.fixed-nav .navbar .navbar-nav .nav-link.active {
+    color: #4e5aff;
+  }
+}
+@media (max-width: 991px) {
+  .header.gred-bg .navbar .navbar-nav .nav-link.active {
+    color: #4e5aff;
+  }
+}
+
+.single-blog-post .post-description .blockquote {
+  border-left-color: #4e5aff;
+}
+.single-blog-post .comments-wrapper .reply-icon {
+  border-color: #4e5aff;
+  color: #4e5aff;
+}
+.single-blog-post .comments-wrapper .reply-icon:hover {
+  background-color: #4e5aff;
+}
+
+.work-nav .control:after {
+  background-color: #4e5aff;
+}
+.work-nav .control.filtr-active, .work-nav .control:hover {
+  color: #4e5aff;
+}
+
+.work-list.type-2 .control {
+  color: #2540f0;
+  background: #f6f7f9;
+  line-height: 1.5;
+  padding: 0.75rem 1.75rem;
+  display: block;
+}
+@media (max-width: 767px) {
+  .work-list.type-2 .control {
+    padding: 0.5rem 1.25rem;
+  }
+}
+.work-list.type-2 .control:after {
+  display: none;
+}
+.work-list.type-2 .control.filtr-active, .work-list.type-2 .control:hover {
+  background: linear-gradient(to right, #4e5aff 2%, #7202bb 82%);
+  color: #ffffff;
+}
+
+.text-secondary {
+  color: #7202bb !important;
+}
+
+.bg-secondary {
+  background-color: #7202bb !important;
+}
+
+.btn-outline-primary {
+  border-color: #4e5aff;
+  color: #4e5aff;
+}
+
+.btn-primary:hover {
+  background-color: transparent !important;
+  color: #4e5aff;
+}
+
+.header.fixed-nav .navbar .navbar-nav .nav-link.active {
+  color: #4e5aff;
+}
+
+.swiper-pagination.pagination-white .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 1;
+}
+.swiper-pagination.pagination-white .swiper-pagination-bullet-active {
+  background: #4e5aff;
+}
+/*# sourceMappingURL=../maps/theme-3.css.map */
